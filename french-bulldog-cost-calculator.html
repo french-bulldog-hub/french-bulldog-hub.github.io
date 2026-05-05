@@ -111,10 +111,10 @@
         </label>
       </div>
       <div class="calc-actions">
-        <button type="button" onclick="calcFrenchieCost()">Calculate estimate</button>
-        <button type="button" class="secondary" onclick="resetFrenchieCalc()">Reset</button>
+        <button id="calcBtn" type="button">Calculate estimate</button>
+        <button id="resetBtn" type="button" class="secondary">Reset</button>
       </div>
-      <div id="calcResult" class="calc-result"></div>
+      <div id="calcResult" class="calc-result" aria-live="polite"></div>
     </div>
 
     <h2>Suggested Content Structure Around the Tool</h2>
@@ -197,34 +197,53 @@
 <footer class="footer"><div class="footer-inner"><span>French Bulldog Guide</span><span>Practical owner notes for daily decisions.</span></div></footer>
 
 <script>
-function calcFrenchieCost() {
-  var city = parseFloat(document.getElementById('cityBand').value);
-  var stage = parseFloat(document.getElementById('lifeStage').value);
-  var insurance = parseFloat(document.getElementById('insuranceBand').value);
-  var care = parseFloat(document.getElementById('careBand').value);
-  var name = (document.getElementById('ownerName').value || 'Owner').trim();
-  var baseMonthly = 210;
-  var monthly = Math.round((baseMonthly * city * stage * care) + insurance);
-  var annual = monthly * 12;
-  var reserve = Math.round(monthly * 0.2);
-  var el = document.getElementById('calcResult');
-  el.style.display = 'block';
-  el.innerHTML = '<strong>' + name + ', here is your Frenchie estimate:</strong><br>' +
-    'Estimated monthly spend: <strong>$' + monthly + '</strong><br>' +
-    'Estimated annual spend: <strong>$' + annual + '</strong><br>' +
-    'Suggested emergency reserve/month: <strong>$' + reserve + '</strong>';
-}
-function resetFrenchieCalc() {
-  document.getElementById('cityBand').selectedIndex = 0;
-  document.getElementById('lifeStage').selectedIndex = 1;
-  document.getElementById('insuranceBand').selectedIndex = 1;
-  document.getElementById('careBand').selectedIndex = 0;
-  document.getElementById('ownerName').value = '';
-  document.getElementById('ownerEmail').value = '';
-  var el = document.getElementById('calcResult');
-  el.style.display = 'none';
-  el.innerHTML = '';
-}
+document.addEventListener('DOMContentLoaded', function () {
+  var calcBtn = document.getElementById('calcBtn');
+  var resetBtn = document.getElementById('resetBtn');
+  var resultEl = document.getElementById('calcResult');
+
+  function getValue(id, fallback) {
+    var el = document.getElementById(id);
+    if (!el) return fallback;
+    var value = (typeof el.value === 'string') ? el.value : String(el.value || '');
+    if (!value.trim()) return fallback;
+    return value.trim();
+  }
+
+  function calcFrenchieCost() {
+    var city = parseFloat(getValue('cityBand', '1.0'));
+    var stage = parseFloat(getValue('lifeStage', '1.0'));
+    var insurance = parseFloat(getValue('insuranceBand', '95'));
+    var care = parseFloat(getValue('careBand', '1.0'));
+    var name = getValue('ownerName', 'Owner');
+
+    var baseMonthly = 210;
+    var monthly = Math.round((baseMonthly * city * stage * care) + insurance);
+    var annual = monthly * 12;
+    var reserve = Math.round(monthly * 0.2);
+
+    resultEl.style.display = 'block';
+    resultEl.innerHTML =
+      '<strong>' + name + ', here is your Frenchie estimate:</strong><br>' +
+      'Estimated monthly spend: <strong>$' + monthly + '</strong><br>' +
+      'Estimated annual spend: <strong>$' + annual + '</strong><br>' +
+      'Suggested emergency reserve/month: <strong>$' + reserve + '</strong>';
+  }
+
+  function resetFrenchieCalc() {
+    document.getElementById('cityBand').selectedIndex = 0;
+    document.getElementById('lifeStage').selectedIndex = 1;
+    document.getElementById('insuranceBand').selectedIndex = 1;
+    document.getElementById('careBand').selectedIndex = 0;
+    document.getElementById('ownerName').value = '';
+    document.getElementById('ownerEmail').value = '';
+    resultEl.style.display = 'none';
+    resultEl.innerHTML = '';
+  }
+
+  calcBtn.addEventListener('click', calcFrenchieCost);
+  resetBtn.addEventListener('click', resetFrenchieCalc);
+});
 </script>
 </body>
 </html>
