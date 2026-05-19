@@ -43,6 +43,12 @@
   .footer { background: #133ea1; color: rgba(255,255,255,0.75); }
   .footer-inner { max-width: 1120px; margin: 0 auto; padding: 20px 22px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   @media (max-width: 840px) { .layout { grid-template-columns: 1fr; } .sidebar { position: static; } .hero h1 { font-size: 1.9rem; } }
+
+  .breadcrumb { background: #fff; border-bottom: 1px solid #e5e7eb; }
+  .breadcrumb-inner { max-width: 1120px; margin: 0 auto; padding: 10px 22px 0; color: #6b7280; font-size: 0.88rem; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .breadcrumb a { color: #6b7280; }
+  .breadcrumb span[aria-current="page"] { color: #374151; font-weight: 600; }
+
 </style>
 <script type="application/ld+json">
     {
@@ -115,6 +121,7 @@
     </nav>
   </div>
 </header>
+<nav class="breadcrumb" aria-label="Breadcrumb"><div class="breadcrumb-inner" style="max-width:1120px;"><a href="/">Home</a><span>›</span><a href="/blog.html">Blog</a><span>›</span><span aria-current="page">French Bulldog Color Patterns Explained</span></div></nav>
 <section class="hero"><div class="hero-inner"><h1>Decoding French Bulldog Colors: Genetics, Standards, and Health Insights</h1><p>Explore French Bulldog colors from breed-standard hues to controversial “rare” marketing. Understand genetics, health trade-offs, and how to read listings without getting played.</p></div></section>
 <div class="layout">
   <article class="article">
@@ -279,7 +286,7 @@
 </section>
   </article>
   <aside class="sidebar">
-    <section class="sidebar-panel"><h3>Quick Links</h3><ul><li><a href="/care.html">Daily Care Checklist</a></li><li><a href="/blog.html">Latest Blog Posts</a></li><li><a href="/about.html">About This Project</a></li><li><a href="/sitemap.html">Sitemap</a></li></ul></section>
+    <section class="sidebar-panel"><h3>Quick Links</h3><ul><li><a href="/">Home page</a></li><li><a href="/blog.html">All posts</a></li><li><a href="/care.html">French Bulldog care checklist</a></li><li><a href="/about.html">About this site</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/sitemap.html">Sitemap</a></li></ul><h3 style="margin-top:16px;">Latest articles</h3><ul><li><a href="/french-bulldog-care-basics.html">French Bulldog Care Basics for First-Time Owners</a></li><li><a href="/can-french-bulldogs-go-up-and-down-stairs.html">Can French Bulldogs Go Up and Down Stairs? Safe Rules</a></li><li><a href="/french-bulldog-cost-calculator.html">French Bulldog Cost Calculator: A Link Magnet Blueprint</a></li></ul></section>
     <section class="sidebar-panel sidebar-newsletter"><h3>Frenchie Notes</h3><p>Get practical, no-fluff French Bulldog tips.</p><input type="email" placeholder="Email address"><button type="button">Subscribe</button></section>
   </aside>
 </div>
