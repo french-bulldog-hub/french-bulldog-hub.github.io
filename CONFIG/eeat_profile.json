@@ -1,0 +1,28 @@
+{
+  "site_name": "Frenchie Hub",
+  "site_url": "https://french-bulldog-hub.github.io",
+  "niche": "French Bulldogs",
+  "brand_voice": "Modern, friendly, slightly trendy — real talk about Frenchies without the hype",
+  "editorial_voice": "Clear and current — we cover Frenchie ownership the way city dwellers actually experience it",
+  "primary_author_label": "Frenchie Hub Content Team",
+  "reviewer_label": "Frenchie Hub Content Review",
+  "update_owner_label": "Frenchie Hub Content Team",
+  "about_title": "Who We Are",
+  "editorial_policy_title": "How We Create Content",
+  "disclosure_title": "Advertising Notice",
+  "ai_assistance_disclosure": "Frenchie Hub uses AI-assisted writing for research and draft structuring. Every article is reviewed by our content team and edited for accuracy before going live.",
+  "article_eeat_block_variants": [
+    "<div style=\"border-left:4px solid #1a56db;background:#eff6ff;padding:14px 18px;margin:24px 0;border-radius:0 6px 6px 0;\"><p style=\"margin:0;font-size:0.93rem;color:#4b5563;\"><strong style=\"color:#1a56db;\">Frenchie Hub Content Team</strong> — This guide is reviewed for accuracy before publishing. French Bulldog care is our only focus.</p></div>",
+    "<div style=\"border-left:4px solid #1a56db;background:#eff6ff;padding:14px 18px;margin:24px 0;border-radius:0 6px 6px 0;\"><p style=\"margin:0;font-size:0.93rem;color:#4b5563;\"><strong style=\"color:#1a56db;\">Written for Frenchie Owners:</strong> The Frenchie Hub team writes for people who live with French Bulldogs in apartments, cities, and small spaces.</p></div>",
+    "<div style=\"border:1px solid #bfdbfe;background:#f8fbff;padding:14px 18px;margin:24px 0;border-radius:6px;\"><p style=\"margin:0;font-size:0.93rem;color:#4b5563;\"><strong style=\"color:#1a56db;\">Real Talk About Frenchies</strong> — Frenchie Hub covers what actually matters: breathing, heat, costs, colors, and city life with a brachycephalic breed.</p></div>",
+    "<div style=\"background:#1a56db;color:#fff;padding:14px 18px;margin:24px 0;border-radius:6px;\"><p style=\"margin:0;font-size:0.93rem;\"><strong>Content Note:</strong> Frenchie Hub keeps its guides current. If you see outdated information, <a href=\"/contact.html\" style=\"color:#cde;\">drop us a message</a>.</p></div>",
+    "<div style=\"border-top:2px solid #1a56db;padding-top:12px;margin:24px 0;\"><p style=\"font-size:0.88rem;color:#6b7280;margin:0;\">Published by <strong style=\"color:#1a56db;\">Frenchie Hub Content Team</strong>. We focus on French Bulldog health, breed-specific quirks, and the real costs and joys of Frenchie ownership.</p></div>"
+  ],
+  "disclosure_variants": [
+    "Frenchie Hub includes affiliate links to Amazon. We earn a commission on purchases — your price doesn't change.",
+    "Some links on this site are affiliate links. Frenchie Hub may earn a small fee if you buy through them.",
+    "This site earns affiliate income from product links. It helps keep the lights on and doesn't change what we write.",
+    "Frenchie Hub participates in affiliate programs. Commissions support content production and editorial independence is maintained.",
+    "When you click a product link here and make a purchase, we may earn a referral fee. It doesn't cost you anything extra."
+  ]
+}
